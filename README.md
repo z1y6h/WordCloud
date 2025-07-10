@@ -9,6 +9,9 @@
 3. **数据入库**：将词频和评论数据分别写入MySQL数据库（`save_to_mysql.py`, `save_to_mysql2.py`），或写入Hive（`save_to_hive.py`）。
 4. **可视化**：用 `generate_wordcloud_trend_html.py` 生成词云和高频词趋势的交互式网页（`wordcloud_trend_interactive.html`）。
 
+## 成果展示
+![img_1.png](img_1.png)
+
 ## 目录结构
 - `main.py`：爬取网易云音乐评论，生成 `Comments.csv`
 - `word_count_spark.py`：用Spark和jieba分词，统计词频，生成 `all_words.txt`
@@ -47,6 +50,7 @@ pip install requests pandas jieba pyspark pymysql pyecharts
    python main.py
    ```
    生成 `Comments.csv`。
+![img.png](img.png)
 2. **分词与词频统计**
    ```bash
    spark-submit word_count_spark.py
